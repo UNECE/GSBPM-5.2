@@ -21,14 +21,9 @@
                 },
             };
         </script>
-  <style>
-    body {
-      counter-reset: h1;
-    }
-    h1::before {
-      content: none;
-    }
-  </style>
+
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  
     </head>
     <body>
         <section id="abstract">
@@ -39,7 +34,7 @@
         </section>
 
         <section> 
-            <h1>1. Introduction</h1>
+            <h1> Introduction</h1>
             <p> 1. The Generic Statistical Business Process Model (GSBPM) describes and defines a set of activities involved in the business processes needed to produce official statistics. It provides a standard framework and harmonised terminology to help statistical organisations to modernise their statistical production processes, as well as to share methods and components. The GSBPM can also be used for integrating data and metadata standards, as a template for process documentation, for harmonising statistical computing infrastructures, and to provide a framework for process quality assessment and improvement. These and other purposes for which the GSBPM can be used are elaborated further in Sections II and VII. This version of the GSBPM is aligned with version 2.0 of the Generic Statistical Information Model (GSIM) and version 1.2 of the Generic Activity Model for Statistical Organisations (GAMSO). </p> 
             <p> <b> Background </b> </p>
             <p> 2. The GSBPM was first developed in 2008 by the Joint UNECE/Eurostat/OECD Group on Statistical Metadata (METIS) based on the business process model used by Statistics New Zealand. Following several drafts and public consultations, version 4.0 of the GSBPM was released in April 2009. Subsequently, it was widely adopted by the global official statistics community, and formed one of the cornerstones of the High-Level Group for the Modernisation of Official Statistics (HLGMOS)<a href="#footnote-1">[1]</a>. vision and strategy for standards-based modernisation. </p>
@@ -161,7 +156,7 @@
         </section>
         
         <section> 
-            <h1>III. Relationships with Other Models and Frameworks </h1>
+            <h1> Relationships with Other Models and Frameworks </h1>
             <p> 25.	Since the release of the GSBPM, several models have been developed under the auspices of the HLG-MOS to support the modernisation of official statistics, collectively referred to as the “ModernStats” models. The following paragraphs outline the ModernStats models that have a strong link to the GSBPM </p>
             <p> <b> GAMSO </b> </p>
             <p> 26.	The GAMSO<a href="#footnote-3">[3]</a> complements and extends the GSBPM by describing and defining activities that take place within a typical statistical organisation that are either not directly related to the production of statistics or that are managed at a corporate or strategic level (i.e. activities in the areas of strategy and leadership, capability development and corporate support). </p>
@@ -191,7 +186,7 @@
         </section>
         
         <section> 
-            <h1>IV. Levels 1 and 2 of the GSBPM </h1>
+            <h1> Levels 1 and 2 of the GSBPM </h1>
             
             <img src="./img/GSBPMv5.2_Figure5.png" alt="Alt text here">
         </section>      
@@ -412,6 +407,7 @@ Figure 8. Design phase and its sub-processes
 
     <h2>  Build Phase  </h2> 
 
+            <img src="./img/GSBPMv5.2_Phase3.png" alt="Alt text here">
 
 Figure 9. Build phase and its sub-processes
 
@@ -454,12 +450,315 @@ Figure 9. Build phase and its sub-processes
                     <li> Moving the process components into the production environment and ensuring they work as expected in that environment (this activity may also be part of sub-process 3.5 (Test production systems).</li>
                 </ul>
 
+
+
+
+    <h2>  Collect Phase </h2>
+ 
+            <img src="./img/GSBPMv5.2_Phase4.png" alt="Alt text here">
+Figure 10. Collect phase and its sub-processes
+
+            <p> 93.	This phase collects or gathers all necessary information (e.g. data, metadata and paradata), using different collection approaches (e.g. acquisition, collection, extraction, transfer), and loads them into the appropriate environment for further processing. Whilst it can include validation of data set formats, it does not include any transformations of the data themselves, as these are all done in the Process phase. For statistical outputs produced regularly, this phase occurs in each iteration.
+
+            <p> 94.	The Collect phase is broken down into four sub-processes (Figure 10), which are presented sequentially, from left to right, but can also occur in parallel, and can be iterative. These sub-processes are:
+
+        <h3> 4.1. Create frame and select sample </h3>
+
+            <p> 95.	This sub-process establishes the frame and selects the sample for this iteration of the collection, as specified in sub-process 2.4 (Design frame and sample). It also includes the coordination of samples between instances of the same business process (e.g. to manage overlap or rotation), and between different processes using a common frame or register (e.g. to manage overlap or to spread response burden). Quality assurance and approval of the frame and the selected sample are also undertaken in this sub-process, though maintenance of underlying registers, from which frames for several statistical business processes are drawn, is treated as a separate activity. The sampling aspect of this sub-process is often not relevant for processes based entirely on the use of pre-existing sources (e.g. administrative sources and other non-survey sources) as such processes generally create frames from the available data and then follow a census approach. Variables from administrative and other non-statistical sources of data can be used as auxiliary variables in the construction of sampling design.
+
+        <h3> 4.2. Set up collection</h3>
+
+            <p> 96.	This sub-process ensures that the people, processes and technology (e.g. web-based applications, devices to be used in collection, communication channels) are ready to collect data and metadata, as designed. It takes place over a period of time, as it includes the strategy, planning and training activities in preparation for the specific instance of the statistical business process. Where the process is repeated regularly, some (or all) of these activities may not be explicitly required for each iteration. For one-off and new processes, these activities can be lengthy. For survey data, this sub-process includes:
+
+                <ul style="list-style-type:disc;">
+                    <li> Training collection staff; </li>
+                    <li> Training system using supervised machine learning techniques; </li>
+                    <li> Ensuring collection resources are available (e.g. collection devices, apps, APIs); </li>
+                    <li> Agreeing on terms with any intermediate collection bodies, (e.g. sub-contractors for computer assisted telephone interviewing, web service providers); </li>
+                    <li> Configuring collection systems to request and receive the data, including location data; </li>
+                    <li> Ensuring the security of data to be collected; </li>
+                    <li> Preparing collection instruments (e.g. printing questionnaires, pre-filling them with existing data, loading questionnaires and data onto interviewers' devices/computers, APIs, web scraping tools); </li>
+                    <li> Providing information for respondents (e.g. drafting letters/emails to respondents, credentials, guidance or tailored information to address questions they may have, or notifying respondents when online reporting instruments will be made available);  </li>
+                    <li> Translation of materials (e.g. into the different languages spoken or used in the country). </li>
+                </ul>
+            <p> 97.	For non-survey sources, this sub-process ensures that the necessary processes, systems and confidentiality procedures are in place, to receive or extract the necessary information from the source. This includes:
+
+                <ul style="list-style-type:disc;">
+                    <li> Evaluating requests to obtain the data and logging the request in a centralised inventory;</li>
+                    <li> Initiating contacts with organisations providing the data, and sending an introductory package with details on the process of obtaining the data;</li>
+                    <li> Routine checks that the system is working as expected.</li>
+                </ul>
+                
+        <h3> 4.3. Run collection</h3>
+
+            <p> 98.	This sub-process is where the collection is implemented. The different collection instruments are used to collect or gather the information, which may include raw microdata or aggregates produced at the source, as well as any associated metadata. 
+
+            <p> 99.	For survey or census data, it can include:
+
+                <ul style="list-style-type:disc;">
+                    <li> Initial contact with respondents to request data and any subsequent follow-up or reminder actions, recording when and how they were contacted, and whether they have reacted;  </li>
+                    <li> Management of the relationship between the statistical organisation and respondents, so that it remains positive, and recording and responding to comments, queries and complaints. (Minimisation of the number of non-respondents contributes significantly to higher quality of the collected data.); </li>
+                    <li> Manual data entry at the point of contact, or fieldwork management, depending on the source and collection approach; </li>
+                    <li> Georeferencing <a href="#footnote-12">[12]</a> at the same time as collection of the data (using inputs from location-enabled systems such as GPS), or recording location by putting a mark on a map, etc., depending on the geographical frame and the technology used. </li>
+                </ul>
+                
+            <p> 100.	Automated logical checks on data at the point of collection (i.e. validation-on-entry for survey response data) are considered to take place in 5.3 (Review and validate). 
+
+            <p> 101.	For administrative, geospatial, or other non-statistical data, the data supplier either sends it as scheduled or is contacted to send the information, which might require follow-ups. Broader technical-level engagement with data suppliers falls under the Data Supplier Management overarching activity. In the case where the data are published under an Open Data license and exist in machine-readable form, they may be freely accessed and used. 
+
+            <p> 102.	This sub-process may also include the monitoring of data collection and making any necessary changes to improve data quality. This includes generating reports, visualising and adjusting the process for obtaining data to ensure the data are fit for use. When the collection meets its targets, it is closed and a report on the collection is produced. Some basic checks of the structure and integrity of the information received may take place within this sub-process, (e.g. checking that files are in the right format and contain the expected fields). 
+
+        <h3> 4.4. Finalise collection</h3>
+
+            <p> 103.	This sub-process includes loading the collected data and metadata into a suitable electronic environment for further processing. It may include manual or automatic data capture, for example, using clerical staff or optical character recognition tools to extract information from paper questionnaires, or converting the formats of files or encoding the variables received from other organisations. It may also include analysis of the metadata and paradata associated with collection to ensure the collection activities have met requirements. In cases where there is a physical collection instrument, such as a paper questionnaire, which is not needed for further processing, this sub-process manages the archiving of that material. When the collection instrument uses software such as an API or an app, this sub-process also includes the versioning and archiving of these. The data could be pseudonymised at this stage before further processing.
+
+    <h2>  Process Phase </h2> 
+ 
+ 	 	 	 	 	 	 	 
+            <img src="./img/GSBPMv5.2_Phase5.png" alt="Alt text here">
+Figure 11. Process phase and its sub-processes
+
+            <p> 104.	This phase describes the processing of input data and their preparation for analysis. It is made up of sub-processes that integrate, classify, check, clean, and transform input data, so that they can be analysed and disseminated as statistical outputs. For statistical outputs produced regularly, this phase occurs in each iteration. The sub-processes in this phase can apply to data from both statistical and non-statistical sources (with the possible exception of sub-process 5.6 (Calculate weights), which is usually specific to survey data). Some variables could be processed prior to others if they are required for data integration (e.g., geospatial variables if used for that purpose).
+
+            <p> 105.	The Process and Analyse phases can be iterative and parallel. Analysis can reveal a broader understanding of the data, which might make it apparent that additional processing is needed. Sometimes the estimates being processed might be already published aggregates (undertaken according to a Revision Policy).
+
+            <p> 106.	Activities within the Process and Analyse phases may also commence before the Collect phase is completed. This enables the compilation of provisional results where timeliness is an important concern for users, and increases the time available for analysis.
+
+            <p> 107.	The Process phase is broken down into eight sub-processes (Figure 11), which are presented sequentially, from left to right, but can also occur in parallel, and can be iterative. These sub-processes are:
+
+        <h3> 5.1. Integrate data </h3>
+
+            <p> 108.	This sub-process integrates data from one or more sources. It is where the results of sub-processes in the Collect phase are combined. The input data can be from a mixture of external or internal sources, and a variety of collection instruments, including extracts of administrative and other non-statistical data sources. Administrative data or other non-statistical sources of data can substitute for all or some of the variables directly collected from a survey. This sub-process also includes harmonising or creating new figures that agree between sources of data. The result is a consolidated set of data. Data integration can include:
+
+                <ul style="list-style-type:disc;">
+                    <li> Combining data from multiple sources, as part of the creation of integrated statistics such as national accounts; </li>
+                    <li> Combining geospatial data and statistical data or other non-statistical data;</li>
+                    <li> Data pooling, with the aim of increasing the effective number of observations of some phenomena;</li>
+                    <li> Matching or record linkage routines, with the aim of linking micro or macro data from different sources;</li>
+                    <li> Data fusion - integration followed by reduction or replacement;</li>
+                    <li> Prioritising, when two or more sources contain data for the same variable, with potentially different values.</li>
+                </ul>
+            <p> 109.	Data integration may take place at any point in this phase, before or after any of the other sub-processes. There may also be several instances of data integration in any statistical business process. Following integration, depending on data protection requirements, data may be de-identified, that is stripped of identifiers such as name and address, to help to protect confidentiality.
+
+        <h3> 5.2. Classify and code </h3>
+
+            <p> 110.	This sub-process classifies and codes the input data. For example, automatic (or clerical) coding routines may assign numeric codes to text responses according to a pre-determined statistical classification to facilitate data capture and processing. Some questions have coded response categories on the questionnaires or administrative source of data, others are coded after collection using an automated process (which may apply machine learning or artificial intelligence techniques) or an interactive, manual process. 
+
+        <h3> 5.3. Review and validate</h3>
+
+            <p> 111. This sub-process examines data to identify potential problems, errors and discrepancies such as outliers, item non-response, miscoding and duplicate records. It can also be referred to as input data validation. It may be run iteratively, validating data against pre-defined edit rules, usually in a set order. It may flag data for automatic or manual inspection or editing. Reviewing and validating can apply to data from any type of source, before and after integration, as well as imputed data from sub-process 5.4 (Edit and impute). Whilst validation is treated as part of the Process phase, in practice, some elements of validation may occur alongside collection activities, particularly for approaches such as computer assisted collection. Whilst this sub-process is concerned with detection and localisation of actual or potential errors, any correction activities that actually change the data is done in sub-process 5.4 (Edit and impute).
+
+        <h3> 5.4. Edit and impute<a href="#footnote-13">[13]</a> </h3>
+
+            <p> 112.	Where data are considered incorrect, missing, unreliable, outdated, or duplicated, new values may be inserted, or erroneous data may be removed in this sub-process. The terms editing and imputation cover a variety of methods to do this, often using a rule-based approach. Specific steps typically include:
+
+                <ul style="list-style-type:disc;">
+                    <li> Determining whether to add or change data;</li>
+                    <li> Selecting the method to be used;</li>
+                    <li> Adding/changing data values;</li>
+                    <li> Writing the new data values back to the data set, and flagging them as changed;</li>
+                    <li> Producing metadata on the editing and imputation process.</li>
+                </ul>
+                
+        <h3> 5.5. Derive new variables and units</h3>
+
+            <p> 113.	This sub-process derives data for variables and units that are not explicitly provided in the collection, but are needed to deliver the required outputs. It derives new variables by applying arithmetic formulae to one or more of the variables that are already present in the dataset, or applying different model assumptions. This activity may need to be iterative, as some derived variables may themselves be based on other derived variables. It is therefore important to ensure that variables are derived in the correct order. New units may be derived by aggregating or splitting data for collection units, or by various other estimation methods. Examples include deriving households where the collection units are persons or enterprises where the collection units are legal units.
+
+        <h3> 5.6. Calculate weights</h3>
+
+            <p> 114.	This sub-process creates weights for unit data records according to the methodology developed in sub-process 2.5 (Design processing and analysis). For example, weights can be used to “gross-up” data to make them representative of the target population (e.g. for sample surveys or extracts of scanner data), or to adjust for non-response in total enumerations. In other situations, variables may need weighting for normalisation purposes. It may also include weight correction for benchmarking indicators (e.g. known population totals). 
+
+        <h3> 5.7. Calculate aggregates</h3>
+
+            <p> 115.	This sub-process creates aggregate data and population totals from microdata or lower-level aggregates. It includes summing data for records sharing certain characteristics (e.g. aggregation of data by demographic or geographic classifications), determining measures of average and dispersion, and applying weights from sub-process 5.6 (Calculate weights) to derive appropriate totals. In the case of statistical outputs which use sample surveys, sampling errors corresponding to relevant aggregates may also be calculated in this sub-process.
+
+        <h3> 5.8. Finalise data files</h3>
+
+            <p> 116.	This sub-process brings together the results of the other sub-processes in this phase in a data set (either micro- or macro-data), which is used as the input to the Analyse phase. Sometimes, this may be an intermediate rather than a final data set, particularly for business processes where there are strong time pressures, and a requirement to produce both preliminary and final estimates.
+
+
+    <h2>  Analyse Phase </h2>
+
+
+            <img src="./img/GSBPMv5.2_Phase6.png" alt="Alt text here">
+Figure 12. Analyse phase and its sub-processes
+
+            <p> 117.	In this phase, statistical outputs are produced and examined in detail. It includes preparing statistical content (including commentary, technical notes, etc.), and ensuring outputs are “fit for purpose” prior to dissemination to users. This phase also includes the sub-processes and activities that enable statistical analysts to understand the data and the statistics produced. The outputs of this phase could also be used as an input to other sub-processes (e.g. analysis of new sources as input to the Design phase). For statistical outputs produced regularly, this phase occurs in every iteration. The Analyse phase and sub-processes are generic for all statistical outputs, regardless of how the data were sourced.
+
+            <p> 118.	The Analyse phase is broken down into five sub-processes (Figure 12), which are presented sequentially, from left to right, but can also occur in parallel, and can be iterative. These sub-processes are:
+
+        <h3> 6.1. Prepare draft outputs </h3>
+
+            <p> 119.	This sub-process is where the data from sub-processes 5.7 (Calculate aggregates) and 5.8 (Finalise data files) are transformed into statistical outputs, which could include indexes, seasonally adjusted statistics, mapped data, microdata, etc. The preparation of maps, GIS outputs and geo-statistical services can be included to maximise the value and capacity to analyse the statistical information. Methodological notes, to accompany the outputs and describe how they have been produced are also prepared in this sub-process taking as input the methodology designed in the Design phase. When new processing or analysis methods such as those based on machine learning or artificial intelligence are used, additional explanations might need to be prepared to communicate/explain the necessary information to the users.
+
+        <h3> 6.2. Validate outputs </h3>
+
+            <p> 120.	This sub-process is where statisticians validate the outputs produced, in accordance with a general quality framework and with expectations and also comparing with auxiliary information available (e.g. from previous cycles or from other sources). This sub-process may include activities involved with the gathering of intelligence, with the cumulative effect of building up a body of knowledge about a specific statistical domain, in order to check for errors and validate the data as objectively as possible. This knowledge is then applied to the current collection, in the current environment, to identify any divergence from expectations and to allow informed analyses. Validation activities can include:
+
+                <ul style="list-style-type:disc;">
+                    <li> Comparing the statistics with previous cycles (if applicable); </li>
+                    <li> Checking that the associated metadata, paradata and quality indicators are present and in line with expectations; </li>
+                    <li> Checking geospatial consistency of the data; </li>
+                    <li> Confronting the statistics against other relevant data (both internal and external); </li>
+                    <li> Investigating inconsistencies in the statistics; </li>
+                    <li> Performing macro editing; </li>
+                    <li> Checking aggregates as a validation for a microdata set; </li>
+                    <li> Validating the statistics against expectations and domain intelligence. </li>
+                </ul>
+        <h3> 6.3. Interpret and explain outputs </h3>
+
+            <p> 121.	This sub-process is where outputs are interpreted in order to understand their meaning and to try to explain them. This can involve viewing the statistics from all perspectives using different tools and media, and carrying out various types of in-depth analysis to gain insight into the results and assess them against initial expectations, based also on an understanding of how those results were produced. Such analyses might include time series analysis and other econometric analyses, etc.
+
+        <h3> 6.4. Apply disclosure control </h3>
+
+            <p> 122.	This sub-process ensures that the data (and metadata) to be disseminated or internally stored for future use do not breach the appropriate rules on confidentiality according to either organisational policies and rules, or to the process-specific methodology created in sub-process 2.5 (Design processing and analysis). This may include checks for primary and secondary disclosure, as well as the application of data suppression or perturbation techniques and output checking. The degree and method of statistical disclosure control may vary for different types of outputs. For example, the approach used for microdata sets for research purposes will be different to that for published tables or visualisations at the aggregated level. Geospatial data or outputs from geospatial data may raise additional confidentiality challenges in terms of personal data protection and disclosure risk.
+
+        <h3> 6.5. Finalise outputs </h3>
+
+            <p> 123.	This sub-process ensures the statistics and associated information are fit for purpose and reach the required quality level and are thus ready for use. It includes:
+
+                <ul style="list-style-type:disc;">
+                    <li> Completing consistency checks;</li>
+                    <li> Determining the level of release, and applying caveats;</li>
+                    <li> Collating supporting information, including interpretation, commentary, technical notes, briefings, measures of uncertainty and any other necessary metadata;</li>
+                    <li> Producing the supporting internal documents;</li>
+                    <li> Conducting pre-release discussion with appropriate internal subject matter experts;</li>
+                    <li> Translating the statistical outputs in countries with multilingual dissemination;</li>
+                    <li> Approving the statistical content for release.</li>
+                </ul>
+    <h2>  Disseminate Phase </h2>
+
+
+            <img src="./img/GSBPMv5.2_Phase7.png" alt="Alt text here">
+Figure 13. Disseminate phase and its sub-processes
+
+            <p> 124.	This phase manages the release of the statistical data and their products to users. It includes all activities associated with assembling and releasing a range of static and dynamic products via a range of channels. These activities support users to access and use the products released by the statistical organisation. For statistical products produced regularly, this phase occurs in each iteration. 
+
+            <p> 125.	Cataloguing and tagging released data and products using relevant metadata standards can greatly increase their discoverability and accessibility both internally and externally. International standards should be used as a norm to ensure that they can be found and consumed easily across a broad range of users. Linking data to geospatial classifications in particular can allow for detailed geographical presentation of outputs. While GSBPM conceives of archiving as taking place within the overarching Data Management and Metadata Management activities, its relevance to finalised outputs in this phase should be noted.
+
+            <p> 126.	The Disseminate phase is broken down into five sub-processes (Figure 13), which are presented sequentially, from left to right, but can also occur in parallel, and can be iterative. These sub-processes are:
+
+        <h3> 7.1. Update output systems </h3>
+
+            <p> 127.	This sub-process manages the update of systems (e.g. databases) where data and metadata are stored ready for dissemination purposes, including:
+
+                <ul style="list-style-type:disc;">
+                    <li> Formatting data and metadata ready to be put into output systems;</li>
+                    <li> Loading data and metadata into output systems;</li>
+                    <li> Ensuring data are linked to the relevant metadata.</li>
+                </ul>
+                
+            <p> 128.	Formatting, loading and linking of metadata should preferably mostly take place in earlier phases, but this sub-process includes a final check that all of the necessary metadata are in place ready for dissemination.
+
+        <h3> 7.2. Produce dissemination products </h3>
+
+            <p> 129.	This sub-process produces the dissemination products <a href = "#footnote-14">[14] </a>, as previously designed in sub-process 2.1 (Design outputs and dissemination), to meet user needs. They could include publications, press releases and websites. The products can take many forms including interactive graphics, tables, maps, public-use microdata sets, linked open data and downloadable files. When the final products raise concern for confidentiality, additional disclosure control may be considered and applied via sub-process 6.4 (Apply disclosure control). Typical steps include:
+
+                <ul style="list-style-type:disc;">
+                    <li> Preparing the product components (explanatory texts, tables, charts, maps, quality statements etc.);</li>
+                    <li> Assembling the components into products;</li>
+                    <li> Editing the products and checking that they meet publication standards.</li>
+                </ul>
+                
+        <h3> 7.3. Release dissemination products </h3>
+
+            <p> 130.	This sub-process ensures that all elements for the release are in place including managing the timing of the release. It includes briefings for specific groups such as the press or ministers, as well as the arrangements for any pre-release embargoes. It also includes the provision of products to subscribers, and managing access to confidential data by authorised user groups, such as researchers. Sometimes an organisation may need to retract a product, for example, if an error is discovered. This is also included in this sub-process.
+
+        <h3> 7.4. Promote dissemination products </h3>
+
+            <p> 131.	Whilst marketing in general can be considered to be part of GAMSO, this sub-process concerns the active promotion of the statistical products produced in a specific statistical business process, to help them reach the widest possible audience. It includes the use of customer relationship management tools, to better target potential users of the products, as well as the use of tools including websites and other platforms like social media to facilitate the process of communicating statistical information to users. These activities may be coordinated with partners in the case of joint products.
+
+        <h3> 7.5. Provide user support </h3>
+
+            <p> 132.	This sub-process ensures that user queries and requests for services such as microdata access are recorded, and that responses are provided within agreed deadlines. These queries and requests should be regularly reviewed to provide an input to the overarching Quality Management activity, as they can indicate new or changing user needs. Replies to user requests can also be used to populate a knowledge database or a “Frequently Asked Questions” page, that is made publicly available, thus reducing the burden of replying to repeated and/or similar requests from external users. This sub-process also includes managing support to any partner organisations involved in disseminating the products.
+
+    <h2>  Evaluate Phase </h2> 
+
+            <img src="./img/GSBPMv5.2_Phase8.png" alt="Alt text here">
+Figure 14. Evaluate phase and its sub-processes
+
+            <p> 133.	This phase manages the evaluation of a specific instance of a statistical business process, as opposed to the more general overarching activity of Quality Management described in Section V (Descriptions of overarching activities). It can take place at the end of the instance of the process, but can also be done on an ongoing basis during the statistical production process. It relies on inputs gathered throughout the different phases. It includes evaluating the success of a specific instance of the statistical business process, drawing on a range of quantitative and qualitative inputs, and identifying and prioritising potential improvements.
+
+            <p> 134.	For statistical outputs produced regularly, evaluation should, at least in theory, occur for each iteration, determining whether future iterations should take place, and if so, whether any improvements should be implemented. However, in some cases, particularly for regular and well-established statistical business processes, evaluation might not be formally carried out for each iteration. In such cases, this phase can be seen as providing the decision as to whether the next iteration should start from the Specify Needs phase, or from some later phase (often the Collect phase).
+
+            <p> 135.	The Evaluate phase is broken down into three sub-processes (Figure 14), which are presented sequentially, from left to right, but can also occur in parallel, and can be iterative. These sub-processes are:
+
+        <h3> 8.1. Gather evaluation inputs </h3>
+
+            <p> 136.	Evaluation material can be produced in any other phase or sub-process. It may take many forms, including feedback from users, process metadata (paradata), system metrics, and staff suggestions. Reports of progress against an action plan agreed during a previous iteration may also form an input to evaluations of subsequent iterations. This sub-process gathers all of these inputs, compiles quality indicators and makes them available for the person or team producing the evaluation. The collection of some of these evaluation materials can be automated and take place in a continuous way throughout the whole process, as defined by the quality framework (see Quality Management in Section V). On the other hand, for the evaluation of certain processes it can be necessary to perform specific activities such as small surveys, (e.g. post-enumeration surveys, re-interview studies, survey on effectiveness of dissemination).
+
+        <h3> 8.2. Conduct evaluation </h3>
+
+            <p> 137.	This sub-process analyses the evaluation inputs, compares them to the expected/target benchmarking results (when available), and synthesises them into an evaluation report or control dashboard. The evaluation can take place at the end of the whole process (ex-post evaluation), for selected activities, during its execution in a continuous way, or throughout the process, thus allowing for quick fixes or continuous improvement. The resulting report should note any quality issues specific to this iteration of the statistical business process as well as highlighting any deviation of performance metrics from expected values, and should make recommendations for changes if appropriate. These recommendations can cover changes to any phase or sub-process for future iterations of the process, or can suggest that the process is not repeated. 
+
+        <h3> 8.3. Agree an action plan </h3>
+
+            <p> 138.	This sub-process brings together the necessary decision-making power to form and agree an action plan based on the evaluation report. It should also include consideration of a mechanism for monitoring the impact of those actions, which may, in turn, provide an input to evaluations of future iterations of the process.
     
           <p id="footnote-11">[11] Action plans may arise from sub-process 8.3</p>
+          <p id="footnote-12">[12] Georeferencing is the process of referencing data against a known geospatial coordinate system. </p>
+          <p id="footnote-13">[13]  For a more detailed consideration of the different steps and flows involved in data editing, please see UNECE Statistics Wikis - Generic Statistical Data Editing Models (https://statswiki.unece.org/display/sde/GSDEM) </p>
+          <p id="footnote-14">[14] Products are considered to be packaged outputs disseminated to users. </p>
+
+    </section>
     
+    
+    <section> 
+        <h1> Other Uses of the GSBPM </h1> 
+            <p> 139.	The original aim of the GSBPM was to provide a basis for statistical organisations to agree on standard terminology for discussions on developing statistical metadata systems and processes. However, as the model has developed, it has become increasingly used for many other purposes related to modernisation of official statistics. Several papers describing actual and potential uses of the GSBPM are available on the UNECE wiki platform <a href="#footnote-15">[15]</a>. The list below aims to highlight some current uses, and to inspire further ideas on how the GSBPM can be used in practice.
+
+            <ol type="a"> 
+                <li> Providing a structure for documentation of statistical processes - The GSBPM can provide a structure for organising and storing documentation within an organisation, promoting standardisation and the identification of good practices; </li>
+                <li> Facilitating the sharing of statistical methods and software - The GSBPM defines the components of statistical processes in a way that not only encourages the sharing of methods and software tools between statistical business processes, but also facilitates sharing between different statistical organisations that apply the model;</li>
+                <li> Describing which standards are or could be used for different phases of the statistical production process;</li>
+                <li> Providing a framework for process quality assessment and improvement - If a benchmarking approach to process quality assessment is to be successful, it is necessary to standardise processes as much as possible. The GSBPM provides a mechanism to facilitate this;</li>
+                <li> Better integrating work on statistical metadata and quality - Linked to the previous point, the common framework provided by the GSBPM can help to integrate international work on statistical metadata with that on data quality by providing a common framework and common terminology to describe the statistical business process;</li>
+                <li> Providing the underlying model for methodological standards frameworks – While managing statistical methodology exists as an activity of the GAMSO, methodological standards can nevertheless be linked to the phase(s) or sub-process(es) they relate to and can then be classified and stored in a structure based on the GSBPM;</li>
+                <li> Developing a business process model repository to store process modelling outputs and allow them to be linked to the statistical business process model; </li>
+                <li> Providing an underlying model to design a training framework and a set of standard terminology to describe skills and expertise needed in the statistical production process;</li>
+                <li> Measuring operational costs - The GSBPM can be used as a basis for measuring the costs of different parts of the statistical business process. This helps to target modernisation activities to improve the efficiency of the parts of the process that are most costly;</li>
+                <li> Measuring system performance - Related to the point above on costs, the GSBPM can also be used to identify components that are not performing efficiently, that are duplicating each other unnecessarily, or that require replacing. Similarly, it can identify gaps for which new components should be developed;</li>
+                <li> Providing a tool for aligning business processes of suppliers of non-statistical data (e.g. administrative data, geospatial data), facilitating communication between statisticians and experts from other domains and for harmonising related terminology;</li>
+                <li> Providing a tool to build capacity and to build technical knowledge methodically by referring to each phase's details.</li>
+            </ol> 
+            
+          <p id="footnote-15">[15] UNECE Statistics Wikis - Uses of the GSBPM (https://statswiki.unece.org/display/GSBPM/Uses+of+GSBPM) </p>
     
     </section>
     
+        
+    <section> 
+        <h1>     Annex I – Level-3 GSBPM Tasks </h1> 
+            <p> 140.	While this generic nature of the GSBPM at the level of phases, sub-processes and overarching activities, is attributed to its success, several organisations have supplemented the GSBPM with some activities that are more detailed than GSBPM sub-processes (which we refer to as “Tasks”) for their local context.
+
+            <p> 141.	In order to recognise this, and to provide better clarity on the activities that may be conducted in different phases and sub-processes, work was undertaken by the Supporting Standards Group to compile examples of such tasks, based on examples of finer-level activities from 9 countries.
+
+            <p> 142.	In 2022, this task team produced a proposal at the task level for each sub-processes, with reference to the then-current version of GSBPM (which was version 5.1). Such tasks are meant to provide a set of building blocks that can be put together to construct a logical sequence for the production process, thereby facilitating the implementation of GSBPM.
+
+            <p> 143.	While these tasks were not updated in light of this current version (5.2) of the GSBPM, version 5.2 shares the same structure as version 5.1 of the GSBPM as no phases or sub-processes were added (albeit that some sub-processes have been slightly renamed). Therefore, this work may still be of interest to those wishing to use the GSBPM, and can be found in the report Finer-level of Activities of Generic Statistical Business Process Model: GSBPM Task <a href="#footnote-16">[16]</a>. 
+    
+          <p id="footnote-16">[16]  Finer-level of Activities of Generic Statistical Business Process Model: GSBPM Task (https://statswiki.unece.org/spaces/GSBPM/pages/363758451/GSBPM+Tasks) </p>
+    </section>
+    
+    
+    <section> 
+        <h1>     Annex II – List of Acronyms  </h1> 
+            <ul style="list-style-type:none;"> 
+                <li> <b> AI </b> – Artificial Intelligence</li>
+                <li>  <b>API </b> – Application Programming Interface</li>
+                <li>  <b>GAMSO</b>  – Generic Activity Model for Statistical Organisations: A reference framework describing and defining the activities that take place within a typical statistical organisation</li>
+                <li>  <b>GIS</b>  – Geographic Information System</li>
+                <li>  <b>GPS </b> – Global Positioning System</li>
+                <li>  <b>GSBPM </b> – Generic Statistical Business Process Model: A flexible tool to describe and define the set of business processes needed to produce official statistics</li>
+                <li>  <b>GSIM</b>  – Generic Statistical Information Model: A reference framework of information classes, which enables generic descriptions of the definition, management and use of data and metadata throughout the statistical production process </li>
+                <li> <b> HLG-MOS</b>  – High-Level Group for the Modernisation of Official Statistics </li>
+                <li>  <b>ICT</b>  – Information and Communications Technology</li>
+                <li>  <b>ISO</b>  – International Organization for Standardization</li>
+                <li>  <b>ML</b>  – Machine Learning</li>
+                <li>  <b>OECD</b>  – Organisation for Economic Cooperation and Development</li>
+                <li>  <b>SDMX</b>  – Statistical Data and Metadata eXchange: A set of technical standards and content-oriented guidelines, together with an IT architecture and tools, to be used for the efficient exchange and sharing of statistical data and metadata</li>
+                <li> <b> UNECE</b>  – United Nations Economic Commission for Europe</li>
+        </section>
     
     </body>
 </html>
