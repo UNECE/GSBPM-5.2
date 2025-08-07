@@ -1,0 +1,11 @@
+<style>
+  /* Reset the counter for h1 if it was previously set */
+  body {
+    counter-reset: h1;
+  }
+  
+  /* Remove any automatically injected numbering */
+  h1::before {
+    content: none;
+  }
+</style>
