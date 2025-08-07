@@ -30,5 +30,168 @@
 
         </section>
 
+        <section> 
+            <h1>I. Introduction</h1>
+            <p> 1. The Generic Statistical Business Process Model (GSBPM) describes and defines a set of activities involved in the business processes needed to produce official statistics. It provides a standard framework and harmonised terminology to help statistical organisations to modernise their statistical production processes, as well as to share methods and components. The GSBPM can also be used for integrating data and metadata standards, as a template for process documentation, for harmonising statistical computing infrastructures, and to provide a framework for process quality assessment and improvement. These and other purposes for which the GSBPM can be used are elaborated further in Sections II and VII. This version of the GSBPM is aligned with version 2.0 of the Generic Statistical Information Model (GSIM) and version 1.2 of the Generic Activity Model for Statistical Organisations (GAMSO). </p> 
+            <p> <b> Background </b> </p>
+            <p> 2. The GSBPM was first developed in 2008 by the Joint UNECE/Eurostat/OECD Group on Statistical Metadata (METIS) based on the business process model used by Statistics New Zealand. Following several drafts and public consultations, version 4.0 of the GSBPM was released in April 2009. Subsequently, it was widely adopted by the global official statistics community, and formed one of the cornerstones of the High-Level Group for the Modernisation of Official Statistics (HLGMOS)<a href="#footnote-1">[1]</a>. vision and strategy for standards-based modernisation. </p>
+            <p> 3. Version 5.0 of the GSBPM was released in December 2013 and endorsed by the Conference of European Statisticians in June 2017. A broad review of GSBPM was conducted during 2017-2018 to incorporate feedback based on practical implementation and to improve consistency with new HLG-MOS models, the GSIM and the GAMSO, leading to the release of version 5.1 which was endorsed by the Conference of European Statisticians in June 2019. Subsequently a further review was conducted during 2023-2024, resulting in the present version 5.2 of the GSBPM described within this document. </p>
+        
+            <p> <b> Main Changes from Version 5.1 </b> </p>
+            <p> 4. The main changes to the GSBPM between versions 5.1 and 5.2 include the following: 
+            <ol type="a"> 
+                <li> Improved or reworked descriptions or explanations:  </li>
+                    <ul style="list-style-type:disc;">
+                        <li> Extra explanation of the approach toward respondents and users.</li>
+                        <li> Greater emphasis for administrative and other non-survey sources of data.</li>
+                        <li> The non-sequential nature of the GSBPM has been emphasised by adding an illustration of iteration between sub-processes.</li>
+                        <li> Extra descriptions for the Overarching Activities of Process Data Management, Knowledge Management, Data Supplier Management. </li>
+                        <li> The role of unit types in distinguishing between concepts from variables.</li>
+                        <li> Distinction between data and products.</li>
+                        <li> Better signposting to distinguish different parts of the GSBPM and how they relate. </li>
+                    </ul>
+                <li> Modernised terminology, especially in reference to particular technologies. </li>
+                <li> Topics reflected or emphasised due to feedback received, such as: </li>
+                    <ul style="list-style-type:disc;">
+                       <li>	Extra mentions of machine learning/artificial intelligence.</li>
+                       <li> Several further references to geospatial considerations.</li>
+                       <li> Factors that could be considered within a business case.</li>
+                       <li> Development approaches that iterate between the Design and Build phases and the importance of considering security in those phases.</li>
+                       <li> Design of fieldwork operations.</li>
+                       <li> Multi-mode collection.</li>
+                       <li> Pseudo-anonymisation.</li>
+                       <li> Microdata as a possible the output in itself.</li>
+                       <li> Cataloguing, tagging and discoverability of statistical outputs.</li>
+                    </ul>
+                <li> According to different structural levels:  </li>
+                    <ul style="list-style-type:disc;">
+                       <li>Overarching Processes: Renamed as “Overarching Activities” to enhance alignment with GAMSO (within which GSBPM is nested), their description has been moved ahead of that for phases and sub-processes.</li>
+                        <li>Phases and sub-processes: No phases or sub-processes were added or removed; however some sub-processes were renamed to make their meaning and purpose clearer.</li>
+                    </ul>
+            </ol> 
+            <p id="footnote-1">[1] UNECE Statistics Wikis - HLG-MOS (https://statswiki.unece.org/display/hlgbas) </p>
+        </section>
+        
+        <section> 
+            <h1>II. The Model </h1>
+            <p> <b> Understanding the GSBPM </b> </p>
+            <p> 6.	A statistical business process involves a collection of related and structured activities and tasks to convert inputs into outputs. In the context of the GSBPM, organisations or groups of organisations perform statistical business processes to create official statistics to satisfy the needs of the users. The output of the process may be a mixed set of physical or digital products presenting data and metadata in different ways, such as publications, maps, and/or electronic services, among others.             </p>
+
+            <p> 7.	The GSBPM should be applied and interpreted flexibly. It is <u> not a rigid framework in which all steps must be followed in a strict order</u>, instead it identifies the possible activities that may be performed as steps in a statistical business process and the inter-dependencies between them. </p>
+
+            <p> 8.	GSBPM is inherently <u> non-sequential </u>, allowing flexibility in revisiting phases or sub-processes as needed. While the model is often presented sequentially for clarity, in practice, activities may occur in parallel, repeat in loops, or be omitted depending on specific requirements or circumstances, as depicted in Figure 1. </p>
+            
+            <img src="./img/GSBPMv5.2_Figure1.png" alt="Alt text here">
+            
+            <p> 9.	In many statistical organisations, the first few phases are only considered when a new output is created or when the process is revised as a result of an evaluation process. Once the output becomes part of “normal” ongoing activity, these phases are not always undertaken (for example, it is not necessary to build new collection tools every time labour force survey data are collected). Figure 2 depicts this.           </p>
+            
+            <img src="./img/GSBPMv5.2_Figure2.png" alt="Alt text here">
+            
+            <p> 10.	The GSBPM should therefore be seen more as a matrix, through which there are many possible paths. In this way, the GSBPM aims to be sufficiently generic to be widely applicable and to encourage a standard view of the statistical business process, without becoming either too restrictive or too abstract and theoretical. The GSBPM supports modularisation of statistical production, for example by allowing often-performed steps to be performed by a reusable software component, perhaps shared across a statistical organisation or even across multiple organisations.   </p>
+
+            <p> 11.	The GSBPM considers a number of different entities to be considered by a statistical business process, such as: </p>
+                <ul style="list-style-type:disc;">
+                    <li> <b>Users </b>: Consumers of statistical outputs (e.g., policymakers, researchers, businesses, and the public). </li>
+                    <li> <b>Respondents</b>: Entities providing information about themselves or others (primary data) to statistical organisations or other producers of official statistics through forms, surveys, or polls. </li>
+                    <li> <b>Data holders</b>: Custodians of datasets generated or collected for non-statistical purposes, such as government agencies, private companies, or registry managers, who may or may not provide data to NSOs. </li>
+                    <li> <b>Data suppliers</b>: Data holders supplying data to NSOs, including administrative, geospatial, or other non-survey data. </li>
+                    <li> <b>Stakeholders</b>: A broad category encompassing users, respondents, data suppliers, data holders, and other parties involved in or affected by the statistical process. </li>
+                </ul> 
+
+            <p> <b> Structure </b> </p>
+            <p> 12.	The GSBPM comprises three main levels, with the extension to an optional extra lower level of “tasks” that are described in Annex I, as follows:</p>
+
+                <ul style="list-style-type:disc;">
+                    <li> <b>Level 0</b>, the statistical business process; </li>
+                    <li> <b>Level 1</b>, the eight phases of the statistical business process; </li>
+                    <li> <b>Level 2</b>, the sub-processes within each phase; </li>
+                    <li> <b>Level 3</b>, the tasks within each sub-process. </li>
+                </ul>
+
+            <p> 13.	A diagram showing the phases (level 1) and sub-processes (level 2) is included in Section IV (Figure 5). The sub-processes are described in detail in Section VI.</p>
+
+            <p> 14.	The GSBPM recognises several activities with a strong statistical component that apply throughout the eight phases, called “Overarching Activities” in the model. These overarching activities are listed below and elaborated further in Section V: 
+                <ul style="list-style-type:disc;">
+                    <li> <b> Quality Management</b> - This overarching activity includes quality assessment and control mechanisms. It recognises the importance of evaluation and feedback throughout the statistical business process; </li>
+                    <li> <b> Metadata Management </b> - Metadata are created/reused and processed within each phase, so there is a strong requirement for metadata management to ensure the appropriate metadata retain their links with data throughout the GSBPM. This includes process-independent considerations such as metadata custodianship and ownership, quality, archiving rules, preservation, retention and disposal; </li>
+                    <li> <b> Data Management </b>- This includes process-independent considerations such as general data security, custodianship, and ownership, data quality, archiving rules, preservation, retention and disposal; </li>
+                    <li> <b> Process Data Management </b>- This includes activities of registering, systematising and using data about the implementation of the statistical business process. Process data can aid in detecting and understanding patterns in the data collected, as well as in evaluating the execution of the statistical business process as such;  </li>
+                    <li> <b> Knowledge Management</b> - An ongoing activity that mainly involves maintaining the documentation of recurring statistical business processes, ensuring that they are repeatable; </li>
+                    <li> <b> Data Supplier Management </b>- This includes cross-process burden management, as well as topics such as profiling and management of contact information (and thus has particularly close links with statistical business processes that maintain registers). </li>
+                </ul>
+
+            <p> <b>Applicability </b> </p>
+            <p> 15.	The GSBPM is intended to apply to all activities undertaken by producers of official statistics at both the national and international levels, which result in data outputs.
+
+            <p> 16.	The model is designed to be applicable regardless of the data source, so it can be used for the design, description, management and quality assessment of processes based on surveys, censuses, administrative sources, and other sources that are primarily collected for non-statistical purposes but may be utilised for statistical production, including the following (non-exclusive) types:
+
+                <ul style="list-style-type:disc;">
+                    <li> <b> Administrative data</b>: Data generated through routine administrative operations by public entities, such as tax records, health registries, or school enrolments.
+                    <li> <b> Privately held data</b>: Data generated through routine operations by private entities, such as commercial transactions, digital platform records, or social media interactions.
+                    <li> <b>“Big Data”</b>: High-volume, high-velocity, and high-variety data derived from digital technologies, such as social media activity, mobile device usage, and sensor networks.
+                    <li> <b>Geospatial data</b>: Data containing geographic or locational attributes, including satellite imagery, GPS data, and mapping systems, which GSBPM considers in a statistical context<a href="#footnote-2">[2]</a>.  
+                </ul>
+                
+            <p> 17.	Whilst typical statistical business processes include collecting and processing data to produce statistical outputs, the GSBPM also applies when existing data are revised, or time-series are re-calculated, either as a result of improved source data or a change in methodology. In these cases, the input data can be original microdata and/or additional data, which are then processed and analysed to produce revised outputs. In such cases, it is likely that several sub-processes and possibly some phases (particularly the early ones) would be omitted. Similarly, the GSBPM can be applied to processes such as the compilation of national accounts and the typical processes in international statistical organisations that use secondary data from countries or other organisations.</p>
+
+            <p> 18.	As well as being applicable for processes which result in statistical outputs, the GSBPM can also be applied to the development and maintenance of statistical registers, where the inputs are similar to those for statistical production (though typically with a greater focus on administrative data), and the outputs are typically frames or other data extractions, which are then used as inputs to other processes. </p>
+
+            <p> 19.	Artificial intelligence (AI) and machine learning (ML) play an increasingly prominent role in statistical production, facilitating the automation of manual tasks and utilisation of new types of data, and ML is referenced where strongly pertinent, notably in the processing and analysis phases. AI and ML have the potential to be powerful tools in the context of the statistical production process, but also need to be used appropriately, for example to ensure the validity of any outputs produced. However, GSBPM remains applicable irrespective of specific technologies or methods used to carry out the activities in the process. </p>
+
+            <p> 20.	The GSBPM is sufficiently flexible to apply in all of the above scenarios.</p>
+
+            <p> <b> Using the GSBPM</b> </p>
+            <p> 21.	The GSBPM is a reference model. It is intended that the GSBPM may be used by organisations to different degrees. An organisation may choose to either use the GSBPM directly or use it as the basis for developing a customised version of the model. It may be used in some cases only as a model to which organisations refer when communicating internally or with other organisations to clarify discussions. The various scenarios for the use of the GSBPM are all valid. </p>
+
+            <p> 22.	When organisations have developed organisation-specific adaptions of the GSBPM, they may make some specialisations to the model to fit their organisational context. Such specialisations may be considered for incorporation within future versions of GSBPM if sufficiently generic and widely supported.  </p>
+
+            <p> 23.	In some cases, it may be appropriate to group some of the elements of the model. For example, the initial three phases could be considered to correspond to a single planning phase. In other cases, particularly for practical implementations, there may be a need to specify components of sub-processes in more detail, and for this purpose, some earlier work on lower-level “Tasks” is provided in Annex 1. </p>
+
+            <p> 24.	There may also be a requirement for a formal sign-off between phases or sub-processes, where the output from one phase is certified as suitable as input for the next. This formal approval is implicit in the model (except in the sub-process 1.6) but may be explicitly implemented in different ways depending on organisational requirements. </p>
+
+            <p id="footnote-2">[2] For those who are only interested in examining the role of GSBPM in relation to geospatial data, a useful resource is the work on GeoGSBPM, undertaken under the auspices of the HLG-MOS (https://statswiki.unece.org/display/GSBPM/GeoGSBPM) </p>
+        </section>
+        
+        <section> 
+            <h1>III. Relationships with Other Models and Frameworks </h1>
+            <p> 25.	Since the release of the GSBPM, several models have been developed under the auspices of the HLG-MOS to support the modernisation of official statistics, collectively referred to as the “ModernStats” models. The following paragraphs outline the ModernStats models that have a strong link to the GSBPM </p>
+            <p> <b> GAMSO </b> </p>
+            <p> 26.	The GAMSO<a href="#footnote-3">[3]</a> complements and extends the GSBPM by describing and defining activities that take place within a typical statistical organisation that are either not directly related to the production of statistics or that are managed at a corporate or strategic level (i.e. activities in the areas of strategy and leadership, capability development and corporate support). </p>
+
+            <p> 27.	Such activities include human resource management, and quality management activities that are carried out at the corporate level such as development of a quality framework, among others. GAMSO includes high level descriptions of these activities. GSBPM is nested within GAMSO and comprises its “production” activity area, as depicted in Figure 3. </p>
+            
+            <img src="./img/GSBPMv5.2_Figure3.png" alt="Alt text here">
+            
+            <p> 28.	 Like the GSBPM, the GAMSO aims to provide a common vocabulary and framework to support international collaboration activities. Greater value will be obtained from the GAMSO if it is applied in conjunction with the GSBPM. </p>
+            
+            <p> <b> GSIM </b> </p>
+            <p> 29.	The GSIM<a href="#footnote-4">[4]</a>  is a reference framework for statistical information, designed to help modernise official statistics at both national and international levels. It enables generic descriptions of the definition, management and use of information (i.e. data and metadata) throughout the statistical production process. It provides a set of standardised, consistently described information classes, which are the inputs and outputs for GSBPM sub-processes. The GSIM helps to explain significant relationships among the entities involved in statistical production, and can be used to guide the development and use of consistent implementation standards or specifications.</p>
+
+            <p>30.	Like the GSBPM, the GSIM is one of the cornerstones for modernising official statistics and moving away from subject matter silos. It identifies around 130 information classes, examples of which include data sets, variables, statistical classifications, units, populations as well as the rules and parameters needed for production processes to run (e.g. data editing rules).</p>
+
+            <p>31.	The GSIM and the GSBPM are complementary models for the production and management of statistical information. As shown in Figure 4 below, the GSIM helps to describe the GSBPM sub-processes by defining the information classes that flow between them, that are created within them, and that are used by them to produce official statistics. Inputs and outputs can be defined in terms of information classes and are formalised in the GSIM.</p>
+
+            <img src="./img/GSBPMv5.2_Figure4.png" alt="Alt text here">
+            
+            <p>32.	Greater value will be obtained from the GSIM if it is applied in conjunction with the GSBPM. Likewise, a greater value will be obtained from the GSBPM if it is applied in conjunction with the GSIM. Nevertheless, it is possible (although not ideal) to apply one without the other. </p>
+
+            <p>33.	Applying the GSIM and the GSBPM together can facilitate the building of efficient metadata-driven systems and help to harmonise statistical computing infrastructures<a href="#footnote-5">[5]</a>. </p>
+            
+            <p id="footnote-3">[3] UNECE Statistics Wikis - GAMSO (https://statswiki.unece.org/display/GAMSO) </p>
+            <p id="footnote-4">[4] GSIM 2.0 GitHub repository (https://unece.github.io/GSIM-2.0/GSIMv2.html) </p>
+            <p id="footnote-5">[5] Examples of linking particular GSIM classes with GSBPM sub-processes can be found within the report “Linking GSBPM and GSIM” (https://statswiki.unece.org/spaces/GSBPM/pages/330370507/Information+flow+within+GSBPM+using+GSIM) </p>
+        </section>
+        
+        <section> 
+            <h1>IV. Levels 1 and 2 of the GSBPM </h1>
+            
+            <img src="./img/GSBPMv5.2_Figure5.png" alt="Alt text here">
+        </section>      
+        
+        <section> 
+            <h1>V. Descriptions of Overarching Activities </h1>
+        </section>      
+         
+        
     </body>
 </html>
